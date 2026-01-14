@@ -7,7 +7,6 @@ html, body {
 #container {
   position: relative;
   height: 100vh;
-  background-image: url("../images/Headshot.jpg");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -49,7 +48,7 @@ html, body {
 
 .hero-title {
   position: relative;
-  top: 6%;
+  top: 11%;
   left: 50%;
   transform: translateX(-50%);
   margin: 0;
@@ -87,7 +86,7 @@ html, body {
 }
 
 .nav-btn {
-  padding: 14px 26px;
+  padding: 18px 32px;
   border-radius: 30px;
   background: rgba(255, 255, 255, 0.9);
   color: #111;
@@ -101,3 +100,16 @@ html, body {
   background: white;
 }
 
+@media (max-width: 600px) {
+  .nav-overlay {
+    top: 70%;
+    max-width: 90%;
+    gap: 16px;
+  }
+
+  .nav-btn {
+    padding: 18px 32px;   
+    font-size: 1.1rem;    
+    border-radius: 36px;
+  }
+}
