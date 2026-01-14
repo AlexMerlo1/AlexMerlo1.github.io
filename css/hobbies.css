@@ -1,0 +1,141 @@
+/* ---------- Base ---------- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #0b0b0b;
+  color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* ---------- Header ---------- */
+.header {
+  text-align: center;
+  padding: 5rem 1rem 3rem;
+}
+
+.header h1 {
+  font-size: 3rem;
+  letter-spacing: 4px;
+  margin: 0;
+}
+
+/* ---------- Main Container ---------- */
+.blog {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+}
+
+/* ---------- Post Layout ---------- */
+.post {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  align-items: center;
+  gap: 4rem;
+}
+
+/* Alternate layout automatically */
+.post:nth-child(even) {
+  grid-template-columns: 1.2fr 1fr;
+}
+
+.post:nth-child(even) img {
+  order: -1;
+}
+
+/* ---------- Text ---------- */
+.post-content h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+
+.post-content p {
+  max-width: 420px;
+  line-height: 1.7;
+  opacity: 0.85;
+}
+
+/* Optional accent line */
+.post-content {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.post-content::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.5rem;
+  width: 4px;
+  height: 60%;
+  background: linear-gradient(to bottom, white, transparent);
+  opacity: 0.5;
+}
+
+/* ---------- Images ---------- */
+.post {
+  align-items: center;
+}
+.post img {
+  max-height: 520px;  
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain; /* safety */
+  border-radius: 18px;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+  justify-self: center;
+}
+
+/* ---------- Footer ---------- */
+.footer {
+  text-align: center;
+  padding: 3rem 0;
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.footer a:hover {
+  opacity: 1;
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 2.3rem;
+  }
+
+  .post {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .post img {
+    order: -1;
+    transform: none;
+  }
+
+  .post-content {
+    padding-left: 0;
+  }
+
+  .post-content::before {
+    display: none;
+  }
+
+  .post-content p {
+    max-width: 100%;
+  }
+}

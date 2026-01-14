@@ -1,0 +1,132 @@
+/* ===============================
+   Global
+================================ */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #0f0f12;
+  color: #e6e6eb;
+  line-height: 1.6;
+}
+
+/* ===============================
+   Header
+================================ */
+.header {
+  padding: 4rem 1.5rem 3rem;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 3rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.header .sub {
+  margin-top: 0.75rem;
+  font-size: 1rem;
+  color: #a1a1aa;
+}
+
+/* ===============================
+   Skills Grid
+================================ */
+.skills {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.75rem;
+}
+
+/* ===============================
+   Cards
+================================ */
+.card {
+  background: #16161a;
+  border-radius: 14px;
+  padding: 1.75rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.4);
+}
+
+.card h2 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #f4f4f5;
+}
+
+/* ===============================
+   Tags
+================================ */
+.tags {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.tags li {
+  padding: 0.45rem 0.75rem;
+  background: #23232a;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  color: #d4d4d8;
+  white-space: nowrap;
+  border: 1px solid #2a2a32;
+}
+
+/* ===============================
+   Footer
+================================ */
+.footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.85rem;
+  color: #a1a1aa;
+  border-top: 1px solid #1f1f25;
+}
+
+/* ===============================
+   Responsive
+================================ */
+@media (max-width: 600px) {
+  .header h1 {
+    font-size: 2.2rem;
+  }
+
+  .skills {
+    padding: 1.5rem 1rem 3rem;
+  }
+}
+
+/* ---------- Footer ---------- */
+.footer {
+  text-align: center;
+  padding: 3rem 0;
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.footer a:hover {
+  opacity: 1;
+}
